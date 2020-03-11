@@ -1,0 +1,10 @@
+This package is to create a lattice QCD measurement code to take the contractions needed to calculate two-point functions <Q_i(x) P_j(y)^\dag>, where Q_i(x) is a \Delta S = 1 four-quark operators in three flavor thoery and P_j(y) is that in four-flavor theory including the charm quark.  The created measurement code main.C compiles with the developed Branch of CPS with developed branch of Grid.  The main script contractions.pl also outputs in ./decompositions/ the linear combinations of the contractions to construct each element of the correlator matrix in the flavor basis, in which each operator has the form (\bar s d)_L (\bar q q)_L/R for each quark q and color-mixed/unmixed contraction.  A LaTeX source contractions_auto.tex, which summarizes the details of the measurement and is inputted in the compilable source contractions.tex, is also created by contractions.pl.
+
+The script utilizes some equivalence such as the equivalence of trace, exchanging x and y and so on.  See Comments_cc.txt for more details.
+
+The package covers two types of measurement codes with(sample4_randsparse_lanc)/without(sample3_lanczos) random multiple point sources.  Only main.C depends on these types and all other output files are the same.
+
+To run the script with $dir='sample4_randsparse_lanc' or $dir='sample3_lanczos'
+  $ ln -sf $dir/contractions.pl
+  $ ln -sf $dir/main.tmp.C
+  $ ./contractions.pl

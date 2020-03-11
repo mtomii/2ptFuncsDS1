@@ -1,0 +1,108 @@
+\documentclass[11pt,dvipdfmx]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+%\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{fancyhdr}
+\setlength{\topmargin}{40mm}
+\addtolength{\topmargin}{-1.9in}
+%\setlength{\textheight}{218mm}
+\setlength{\textheight}{216mm}
+%\setlength{\oddsidemargin}{22mm}
+\addtolength{\oddsidemargin}{-1.1in}
+%\setlength{\evensidemargin}{22mm}
+\addtolength{\evensidemargin}{-1.1in}
+\setlength{\textwidth}{176mm}
+\setstretch{1.14}
+\allowdisplaybreaks[1]
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{subfigure}
+
+\def\slashchar#1{\setbox0=\hbox{$#1$} % set a box for #1
+\dimen0=\wd0 % and get its size
+\setbox1=\hbox{/} \dimen1=\wd1 % get size of /
+\ifdim\dimen0>\dimen1 % #1 is bigger
+\rlap{\hbox to \dimen0{\hfil/\hfil}} % so center / in box
+#1 % and print #1
+\else % / is bigger
+\rlap{\hbox to \dimen1{\hfil$#1$\hfil}} % so center #1
+/ % and print /
+\fi}
+
+\newcommand{\since}{\raisebox{1.2ex}{.}\raisebox{.2ex}{.}\raisebox{1.2ex}{.}}%'∵'の定義
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+\newcommand{\1}{\mbox{1}\hspace{-0.25em}\mbox{l}}
+
+\newcommand{\D}{{\cal{D}}}
+\newcommand{\del}{\partial}
+\newcommand{\td}{{\rm{d}}}
+\newcommand{\e}{{\rm{e}}}
+\newcommand{\q}{{\rm{q}}}
+\newcommand{\up}{{\rm{u}}}
+\newcommand{\s}{{\rm{s}}}
+\newcommand{\G}{{\rm{G}}}
+\newcommand{\img}{{\rm{i}}}
+\newcommand{\M}{{\cal{M}}}
+\newcommand{\Opr}{{\cal{O}}}
+\newcommand{\tr}{{\rm{tr}}}
+\newcommand{\Tr}{{\rm{Tr}}}
+
+\title{Independent portions of fully connected diagrams in two-point functions of $\Delta S=1$ four quark operators}
+\author{Masaaki Tomii}
+\date{\today}
+
+\begin{document}
+%\maketitle
+
+\begin{align}
+F_4(x,y;\Gamma_1,\Gamma_2,\Gamma_3,\Gamma_4)^{q_1q_2q_3q_4}
+&= \Tr\left[
+\Gamma_1S_F^{q_1}(x,y)
+\Gamma_2S_F^{q_2}(y,x)
+\Gamma_3S_F^{q_3}(x,y)
+\Gamma_4S_F^{q_4}(y,x)
+\right],
+\\
+F_2(x,y;\Gamma_1,\Gamma_2)^{q_1q_2}
+&= \Tr\left[
+\Gamma_1S_F^{q_1}(x,y)
+\Gamma_2S_F^{q_2}(y,x)
+\right],
+\\
+F_4'(x,y;\Gamma_1,\Gamma_2,\Gamma_3,\Gamma_4)^{q_1q_2q_3q_4}
+&= \Tr\left[
+\Gamma_1S_F^{q_1}(x,x)
+\Gamma_2S_F^{q_2}(x,y)
+\Gamma_3S_F^{q_3}(y,y)
+\Gamma_4S_F^{q_4}(y,x)
+\right]
+\\
+F_3(x,y;\Gamma_1,\Gamma_2,\Gamma_3)^{q_1q_2q_3}
+&= \Tr\left[
+\Gamma_1S_F^{q_1}(x,x)
+\Gamma_2S_F^{q_2}(x,y)
+\Gamma_3S_F^{q_3}(y,x)
+\right],
+\\
+F_1(x;\Gamma)^q
+&= \Tr\left[
+\Gamma S_F^q(x,x)
+\right].
+\end{align}
+
+\input{contractions_auto}
+
+%\begin{thebibliography}{9}
+%\bibitem{Chetyrkin:2010dx} 
+%  K.~G.~Chetyrkin and A.~Maier,
+%  %``Massless correlators of vector, scalar and tensor currents in position space at orders $\alpha_s^3$ and $\alpha_s^4$: Explicit analytical results,''
+%  Nucl.\ Phys.\ B {\bf 844}, 266 (2011)
+%  doi:10.1016/j.nuclphysb.2010.11.007
+%  [arXiv:1010.1145 [hep-ph]].
+%\end{thebibliography}
+\end{document}

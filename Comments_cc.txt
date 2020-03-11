@@ -1,0 +1,131 @@
+### Comments on equivalence class of correlators regarding complex conjugate ###
+
+While Euclidean correlators should be real, that is the case after summing over all possible contractions and taking the ensemble average.  In other words, each trace, in general, is complex and its imaginary part must not be discarded if it is to be multiplied with another trace.
+
+While each contraction, which I mean is a trace or a product of a couple of traces that contains relevant numbers of quark propagators and gamma matrices, is still complex for each configuration, its imaginary part on the other hand is no longer needed because it will be combined with other contractions just additively, i.e. won't affect the real part, and the imaginary part will end up with zero.
+
+Therefore, we will consider three kinds of equivalence classes:
+ 1. Equivalence relation of trace
+    eg: Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) Γ3 S_F^q3(x-y) Γ4 S_F^q4(y-x) ]
+      ≡ Tr[ Γ3 S_F^q3(x-y) Γ4 S_F^q4(y-x) Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) ]
+        Only the F_4-type may have such degeneracy
+ 2. Equivalence relation of contraction type 1
+    eg: Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) ]•Tr[ Γ3 S_F^q3(x-y) Γ4 S_F^q4(y-x) ]
+      ≡ Tr[ Γ1★S_F^q2(x-y) Γ2★S_F^q1(y-x) ]•Tr[ Γ3★S_F^q4(x-y) Γ4★S_F^q3(y-x) ]
+        Γ★ = γ5 Γ† γ5
+	Valid (up to real part for each configuration && in infinite statistic limit)
+ 3. Equivalence relation of contraction type 2
+    eg: Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) ]•Tr[ Γ3 S_F^q3(x-y) Γ4 S_F^q4(y-x) ]
+      ≡ Tr[ Γ2 S_F^q2(x-y) Γ1 S_F^q1(y-x) ]•Tr[ Γ4 S_F^q4(x-y) Γ3 S_F^q3(y-x) ]
+        Valid in infinite statistic limit
+
+
+
+### Setting of Format ###
+
+# F_4-type: <Img: not needed>
+ F_4(Γ1,Γ2,Γ3,Γ4;q1,q2,q3,q4)
+   = Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) Γ3 S_F^q3(x-y) Γ4 S_F^q4(y-x) ]
+ Identity 1:
+     F_4(Γ1,Γ2,Γ3,Γ4;q1,q2,q3,q4)
+   ≡ F_4(Γ3,Γ4,Γ1,Γ2;q3,q4,q1,q2)
+ Identity 2:
+     F_4(Γ1, Γ2, Γ3, Γ4; q1,q2,q3,q4)
+   ≡ F_4(Γ1★,Γ4★,Γ3★,Γ2★;q4,q3,q2,q1)^*
+
+
+# F_4'-type: <Img: not needed>
+ F_4'(Γ1,Γ2,Γ3,Γ4;q1,q2,q3,q4)
+   = Tr[ Γ1 S_F^q1(x-x) Γ2 S_F^q2(x-y) Γ3 S_F^q3(y-y) Γ4 S_F^q4(y-x) ]
+ Identity 2:
+     F_4'(Γ1, Γ2, Γ3, Γ4; q1,q2,q3,q4)
+   ≡ F_4'(Γ2★,Γ1★,Γ4★,Γ3★;q1.q4,q3,q2)^*
+
+
+# F_3-type: <Img: needed>
+ F_3(x,y;Γ1,Γ2,Γ3;q1,q2,q3)
+   = Tr[ Γ1 S_F^q1(x-x) Γ2 S_F^q2(x-y) Γ3 S_F^q3(y-x) ]
+ Identity 2:
+     F_3(Γ1, Γ2, Γ3; q1,q2,q3)
+   ≡ F_3(Γ2★,Γ1★,Γ3★;q1.q3,q2)^*
+
+
+# F_2-type: <Img: needed>
+ F_2(Γ1,Γ2;q1,q2) = Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) ]
+ Identity 2:
+     F_2(Γ1, Γ2; q1,q2)
+   ≡ F_2(Γ1★,Γ2★;q2,q1)^*
+
+
+# F_1-type: <Img: needed>
+ F_1(x;Γ;q) = Tr[ Γ S_F^q(x-x) ]
+ Identity 2:
+     F_1(x;Γ; q1)
+   ≡ F_1(x;Γ★;q1)^*
+
+
+
+
+### Ensemble-Avg relations ###
+# F_4-type:
+ F_4(Γ1,Γ2,Γ3,Γ4;q1,q2,q3,q4)
+   = Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) Γ3 S_F^q3(x-y) Γ4 S_F^q4(y-x) ]
+ Identity 3:
+     < F_4(Γ1,Γ2,Γ3,Γ4;q1,q2,q3,q4) >
+   ≡ < F_4(Γ2,Γ3,Γ4,Γ1;q2,q3,q4,q1) >
+
+
+# F_22-type:
+ F_2(Γ1,Γ2;q1,q2) F_2(Γ3,Γ4;q3,q4)
+   = Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) ] Tr[ Γ3 S_F^q3(x-y) Γ4 S_F^q4(y-x) ]
+ Identity 3:
+     < F_2(Γ1,Γ2;q1,q2) F_2(Γ3,Γ4;q3,q4) >
+   ≡ < F_2(Γ2,Γ1;q2,q1) F_2(Γ4,Γ3;q4,q3) >
+
+
+# F_4'-type:
+ F_4'(Γ1,Γ2,Γ3,Γ4;q1,q2,q3,q4)
+   = Tr[ Γ1 S_F^q1(x-x) Γ2 S_F^q2(x-y) Γ3 S_F^q3(y-y) Γ4 S_F^q4(y-x) ]
+ Identity 3:
+     < F_4'(Γ1,Γ2,Γ3,Γ4;q1,q2,q3,q4) >
+   ≡ < F_4'(Γ3,Γ4,Γ1,Γ2;q3,q4,q1,q2) >
+
+
+# F_31-type:
+ F_3(x,y;Γ1,Γ2,Γ3;q1,q2,q3) F_1(y;Γ4;q4) 
+   = Tr[ Γ1 S_F^q1(x-x) Γ2 S_F^q2(x-y) Γ3 S_F^q3(y-x) ] Tr[ Γ4 S_F^q4(y-y) ]
+ Identity 3:
+     < F_3(x,y;Γ1,Γ2,Γ3;q1,q2,q3) F_1(y;Γ4;q4) >
+   ≡ < F_3(y,x;Γ1,Γ2,Γ3;q1,q2,q3) F_1(x;Γ4;q4) >
+
+
+# F_211-type:
+ F_2(Γ1,Γ2;q1,q2) F_1(x;Γ3;q3) F_1(y;Γ4;q4)
+   = Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) ] Tr[ Γ3 S_F^q3(x-x) ] Tr[ Γ4 S_F^q4(y-y) ]
+ Identity 3:
+     < F_2(Γ1,Γ2;q1,q2) F_1(x;Γ3;q3) F_1(y;Γ4;q4) >
+   ≡ < F_2(Γ2,Γ1;q2,q1) F_1(x;Γ4;q4) F_1(y;Γ3;q3) >
+
+
+# F_3-type:
+ F_3(x,y;Γ1,Γ2,Γ3;q1,q2,q3)
+   = Tr[ Γ1 S_F^q1(x-x) Γ2 S_F^q2(x-y) Γ3 S_F^q3(y-x) ]
+ Identity 3:
+     < F_3(x,y;Γ1,Γ2,Γ3;q1,q2,q3) >
+   ≡ < F_3(y,x;Γ1,Γ2,Γ3;q1,q2,q3) >
+
+
+# F_21-type:
+ F_2(Γ1,Γ2;q1,q2) F_1(y;Γ3;q3)
+   = Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) ] Tr[ Γ3 S_F^q3(y-y) ]
+ Identity 3:
+     < F_2(Γ1,Γ2;q1,q2) F_1(y;Γ3;q3) >
+   ≡ < F_2(Γ2,Γ1;q2,q1) F_1(x;Γ3;q3) >
+
+
+# F_2-type:
+ F_2(Γ1,Γ2;q1,q2)
+   = Tr[ Γ1 S_F^q1(x-y) Γ2 S_F^q2(y-x) ]
+ Identity 3:
+     < F_2(Γ1,Γ2;q1,q2) >
+   ≡ < F_2(Γ2,Γ1;q2,q1) >
